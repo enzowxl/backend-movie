@@ -23,7 +23,8 @@ server.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-server.listen(3333, () => {
+server.listen(3000, () => {
   console.clear();
-  console.log("[SERVER]: Online");
+
+  console.log("\x1b[32m", "[SERVER]: Started", "\x1b[0m");
 });
