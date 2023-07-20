@@ -23,7 +23,7 @@ server.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-server.listen(3000, () => {
+server.listen(process.env.PORT ? Number(process.env.PORT) : 3333, () => {
   console.clear();
 
   console.log("\x1b[32m", "[SERVER]: Started", "\x1b[0m");
