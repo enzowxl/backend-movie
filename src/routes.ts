@@ -6,6 +6,7 @@ import { DetailUserController } from "./controllers/user/DetailUserController";
 
 import { AddWatchListController } from "./controllers/watchlist/AddWatchListController";
 import { ListWatchListController } from "./controllers/watchlist/ListWatchListController";
+import { RemoveWatchListController } from "./controllers/watchlist/RemoveWatchListController";
 
 import { AddFavoritesController } from "./controllers/favorites/AddFavoritesController";
 import { ListFavoritesController } from "./controllers/favorites/ListFavoritesController";
@@ -21,6 +22,7 @@ router.get("/details/user", isAuthenticated, new DetailUserController().handle);
 
 router.post("/create/watchList", isAuthenticated, new AddWatchListController().handle);
 router.get("/details/watchList", isAuthenticated, new ListWatchListController().handle);
+router.delete("/delete/watchList", isAuthenticated, new RemoveWatchListController().handle);
 
 router.post("/create/favorites", isAuthenticated, new AddFavoritesController().handle);
 router.get("/details/favorites", isAuthenticated, new ListFavoritesController().handle);
